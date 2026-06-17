@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>NYP BMH Internal Medicine Residency</title>
+ <link rel="stylesheet" href="css/style.css">
+ <style>
+ .search-wrap { position: relative; display: inline-block; margin-top: 20px; }
+ #search-bar {
+ border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; padding: 10px 16px;
+ font-size: 14px; width: 380px; outline: none; background: rgba(255,255,255,0.12);
+ color: #fff;
+ }
+ #search-bar::placeholder { color: rgba(255,255,255,0.5); }
+ #search-bar:focus { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.18); }
+ #search-results {
+ position: absolute; top: 100%; left: 0; width: 100%;
+ background: #fff; border: 1px solid #ddd; border-radius: 6px;
+ box-shadow: 0 4px 16px rgba(0,0,0,0.15); z-index: 200; display: none;
+ }
+ .sr-item {
+ display: block; padding: 10px 14px; font-size: 13px; font-weight: 600;
+ color: #1a1a1a; border-bottom: 1px solid #f0f0f0; text-decoration: none;
+ }
+ .sr-item:last-child { border-bottom: none; }
+ .sr-item span { display: block; font-size: 11px; color: #888; font-weight: normal; margin-top: 2px; }
+ .sr-item:hover { background: #fde8ec; color: #C8102E; }
+
+ /* Program Director strip */
+ .pd-strip {
+ background: #f7f7f7;
+ border-top: 3px solid var(--red);
+ padding: 28px 32px;
+ display: flex;
+ align-items: center;
+ gap: 24px;
+ }
+ .pd-avatar {
+ width: 72px; height: 72px; border-radius: 50%;
+ background: var(--navy);
+ display: flex; align-items: center; justify-content: center;
+ color: #fff; font-size: 22px; font-weight: bold;
+ flex-shrink: 0;
+ border: 3px solid var(--red);
+ }
+ .pd-text h3 { font-size: 15px; font-weight: bold; color: var(--navy); margin-bottom: 4px; }
+ .pd-text p { font-size: 13px; color: var(--gray-text); line-height: 1.6; max-width: 640px; }
+ .pd-text .pd-name { font-size: 11px; color: var(--red); font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: block; }
+ </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<div class="hero">
+ <div class="hero-eyebrow">NYP Brooklyn Methodist · Internal Medicine Residency</div>
+ <h1>Welcome to the NYP Brooklyn Methodist Internal Medicine Residency Program</h1>
+ <p class="hero-mission">Our program is committed to training the next generation of skilled, compassionate internists through outstanding clinical education, a diverse patient population, and a strong culture of mentorship and wellness — rooted in the heart of Brooklyn.
+ </p>
+ <div class="hero-btns">
+ <a href="recruitment.html" class="btn-white">Recruitment Info</a>
+ <a href="didactics.html" class="btn-red">Didactics & Resources</a>
+ <a href="schedules.html" class="btn-outline-white">View Schedules</a>
+ </div>
+ <div class="search-wrap">
+ <input type="text" id="search-bar" placeholder="Search schedules, policies, resources…">
+ <div id="search-results"></div>
+ </div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="quick-links">
+ <a href="https://nypbmh.medhub.com/" target="_blank" class="ql">Log Duty Hours</a>
+ <a href="schedules.html" class="ql">Block Schedule</a>
+ <a href="didactics.html" class="ql">Board Prep</a>
+ <a href="policies.html" class="ql">Escalation Protocol</a>
+ <a href="https://my.adp.com/" target="_blank" class="ql">ADP Payroll</a>
+ <a href="resources.html#meals" class="ql">Meal Card</a>
+ <a href="phone-directory.html" class="ql">Phone Directory</a>
+ <a href="resources.html#imprivata" class="ql">Imprivata Reset</a>
+</div>
+
+<!-- FEATURE CARDS (CU-style) -->
+<div class="feature-grid">
+  <a href="recruitment.html#housestaff" class="feature-card">
+    <div class="feature-card-img navy">
+      <div class="feature-card-img-text">
+        <h3>Meet Our Housestaff</h3>
+        <span class="feature-card-link">Meet the residents →</span>
+      </div>
+    </div>
+    <div class="feature-card-body">
+      <p>Get to know our residents — a diverse group of physicians trained at medical schools across the country, united by a commitment to exceptional patient care in Brooklyn.</p>
+    </div>
+  </a>
+  <a href="didactics.html" class="feature-card">
+    <div class="feature-card-img red">
+      <div class="feature-card-img-text">
+        <h3>The Training Program</h3>
+        <span class="feature-card-link">Explore the curriculum →</span>
+      </div>
+    </div>
+    <div class="feature-card-body">
+      <p>Our curriculum blends rigorous inpatient and outpatient clinical experience with a robust didactic schedule including grand rounds, morning report, board prep, and journal club.</p>
+    </div>
+  </a>
+  <a href="recruitment.html" class="feature-card">
+    <div class="feature-card-img dark">
+      <div class="feature-card-img-text">
+        <h3>Information for Applicants</h3>
+        <span class="feature-card-link">Apply now →</span>
+      </div>
+    </div>
+    <div class="feature-card-body">
+      <p>Learn about our program structure, benefits, rotations, and what makes NYP Brooklyn Methodist a great place to train. Applications accepted through ERAS.</p>
+    </div>
+  </a>
+</div>
+
+<!-- PROGRAM DIRECTOR WELCOME -->
+<div class="pd-strip">
+ <div class="pd-avatar">FF</div>
+ <div class="pd-text">
+ <span class="pd-name">Program Director's Welcome</span>
+ <h3>Dr. Franklyn Fenton</h3>
+ <p>Welcome to the NYP Brooklyn Methodist Internal Medicine Residency Program. We are proud to offer a training experience that combines the highest level of clinical care with a supportive, collegial environment. Our residents develop into outstanding physicians who are well-prepared for careers in general internal medicine, hospital medicine, and subspecialty fellowship training.</p>
+ <a href="recruitment.html#director" style="font-size:12px;font-weight:bold;color:var(--red);margin-top:8px;display:inline-block;">Read full welcome →</a>
+ </div>
+</div>
+
+<!-- QUICK ACCESS RESOURCES (navy bg) -->
+<div class="section section-navy">
+ <div class="section-header">
+ <div class="section-title-white">Resident Resources</div>
+ <a href="resources.html" class="view-all-white">View all →</a>
+ </div>
+ <div class="cards-grid">
+ <a href="didactics.html" class="card-navy">
+ <div class="card-title">Didactics & Exams</div>
+ <div class="card-desc">Lectures, grand rounds, board prep, morning report</div>
+ <div class="card-link">Browse →</div>
+ </a>
+ <a href="schedules.html" class="card-navy">
+ <div class="card-title">Schedules</div>
+ <div class="card-desc">Block, weekend, ambulatory & stroke schedules</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="policies.html" class="card-navy">
+ <div class="card-title">Policies</div>
+ <div class="card-desc">Escalation protocol, PPE, C. diff, swaps</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="wellness.html" class="card-navy">
+ <div class="card-title">Wellness</div>
+ <div class="card-desc">Sleep, wellbeing & stress reduction resources</div>
+ <div class="card-link">Explore →</div>
+ </a>
+ <a href="resources.html#epic" class="card-navy">
+ <div class="card-title">EPIC Resources</div>
+ <div class="card-desc">Tips, guides & workflows for EPIC</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="resources.html#mtr" class="card-navy">
+ <div class="card-title">MTR Resources</div>
+ <div class="card-desc">Guidelines, endorsement sheets & scheduling</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="resources.html#forms" class="card-navy">
+ <div class="card-title">Forms & Surveys</div>
+ <div class="card-desc">Phlebotomy, transport, mortality & time-off forms</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="resources.html#reimbursement" class="card-navy">
+ <div class="card-title">Reimbursement</div>
+ <div class="card-desc">Educational & conference travel reimbursement</div>
+ <div class="card-link">View →</div>
+ </a>
+ <a href="phone-directory.html" class="card-navy">
+ <div class="card-title">Phone Directory</div>
+ <div class="card-desc">Floor extensions & key contacts</div>
+ <div class="card-link">View →</div>
+ </a>
+ </div>
+</div>
+
+<!-- ANNOUNCEMENTS — powered by OneDrive Excel -->
+<div class="section section-gray">
+  <div class="section-header">
+    <div class="section-title">Announcements</div>
+    <span style="font-size:11px;color:#888;">Updated automatically from OneDrive</span>
+  </div>
+  <div id="announcements-container">
+    <div id="ann-loading" style="text-align:center;padding:24px;color:#888;font-size:13px;">Loading announcements...</div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/shared.js"></script>
+<script src="js/announcements.js"></script>
+<script>
+ document.getElementById('nav-placeholder').innerHTML = renderNav('home');
+ document.getElementById('footer-placeholder').innerHTML = renderFooter();
+ const searchPages = [
+ { title: 'Schedules', desc: 'Block, weekend, ambulatory, jeopardy schedules', href: 'schedules.html' },
+ { title: 'Didactics & Exams', desc: 'Lectures, grand rounds, board prep, morning report', href: 'didactics.html' },
+ { title: 'Policies & Guidelines', desc: 'Escalation protocols, PPE, C. diff, swaps', href: 'policies.html' },
+ { title: 'Wellness Resources', desc: 'Sleep, wellbeing, stress reduction', href: 'wellness.html' },
+ { title: 'Recruitment', desc: 'Program overview, resident profiles, applicant info', href: 'recruitment.html' },
+ { title: 'EPIC Resources', desc: 'EPIC tips and guides', href: 'resources.html#epic' },
+ { title: 'MTR Resources', desc: 'MTR guidelines and endorsement sheets', href: 'resources.html#mtr' },
+ { title: 'Forms & Surveys', desc: 'Phlebotomy, transport, mortality, time-off forms', href: 'resources.html#forms' },
+ { title: 'Phone Directory', desc: 'Floor extensions and contacts', href: 'phone-directory.html' },
+ { title: 'MEdhub Duty Hours', desc: 'Log your duty hours', href: 'https://nypbmh.medhub.com/' },
+ { title: 'ADP Payroll', desc: 'Pay stubs, direct deposit, W2', href: 'https://my.adp.com/' },
+ { title: 'Reimbursement', desc: 'Educational and conference/travel reimbursement', href: 'resources.html#reimbursement' },
+ { title: 'Imprivata Reset', desc: 'Reset your Imprivata password', href: 'resources.html#imprivata' },
+ ];
+ initSearch(searchPages);
+</script>
+</body>
+</html>
