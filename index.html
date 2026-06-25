@@ -47,6 +47,48 @@
  .pd-text h3 { font-size: 15px; font-weight: bold; color: var(--navy); margin-bottom: 4px; }
  .pd-text p { font-size: 13px; color: var(--gray-text); line-height: 1.6; max-width: 640px; }
  .pd-text .pd-name { font-size: 11px; color: var(--red); font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: block; }
+
+ /* Hero two-column layout */
+ .hero-flex { display: flex; gap: 40px; align-items: flex-start; justify-content: space-between; }
+ .hero-left { flex: 1; min-width: 0; }
+ .hero-right { width: 320px; flex-shrink: 0; }
+ @media (max-width: 800px) {
+ .hero-flex { flex-direction: column; }
+ .hero-right { width: 100%; }
+ }
+
+ /* Cycling announcement card */
+ .hero-ann-card {
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 8px;
+ padding: 18px 20px;
+ min-height: 150px;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-ann-label {
+ font-size: 10px;
+ font-weight: bold;
+ color: var(--gold);
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ margin-bottom: 12px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ }
+ .hero-ann-dots { display: flex; gap: 5px; }
+ .hero-ann-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); transition: background 0.2s; }
+ .hero-ann-dot.active { background: var(--gold); }
+ .hero-ann-content { min-height: 90px; }
+ .hero-ann-tag { font-size: 9px; font-weight: bold; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+ .hero-ann-text { font-size: 14px; font-weight: bold; color: #fff; line-height: 1.4; margin-bottom: 6px; }
+ .hero-ann-sub { font-size: 11px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+ .hero-ann-fade { animation: fadeIn 0.4s ease; }
+ @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+ .hero-ann-viewall { font-size: 11px; color: rgba(255,255,255,0.7); text-decoration: none; display: inline-block; margin-top: 10px; }
+ .hero-ann-viewall:hover { color: #fff; text-decoration: underline; }
  </style>
 </head>
 <body>
@@ -55,6 +97,8 @@
 
 <!-- HERO -->
 <div class="hero">
+ <div class="hero-flex">
+ <div class="hero-left">
  <div class="hero-eyebrow">NYP Brooklyn Methodist · Internal Medicine Residency</div>
  <h1>Welcome to the NYP Brooklyn Methodist Internal Medicine Residency Program</h1>
  <p class="hero-mission">Our program is committed to training the next generation of skilled, compassionate internists through outstanding clinical education, a diverse patient population, and a strong culture of mentorship and wellness — rooted in the heart of Brooklyn.
@@ -67,6 +111,18 @@
  <div class="search-wrap">
  <input type="text" id="search-bar" placeholder="Search schedules, policies, resources…">
  <div id="search-results"></div>
+ </div>
+ </div>
+
+ <div class="hero-right">
+ <div class="hero-ann-card" style="padding:14px;">
+ <div class="hero-ann-label">
+ <span>Announcements</span>
+ </div>
+ <iframe src="https://newyorkpresbyterian-my.sharepoint.com/:x:/r/personal/lhw9007_nyp_org/Documents/NYP-BMH-Residency/Announcements/Announcements1.xlsx?d=w05b5a858c8194b63b9fe120d49e251f5&csf=1&web=1&e=s1tIUT&action=embedview" width="100%" height="220" frameborder="0" style="border:none;border-radius:6px;background:#fff;"></iframe>
+ <a href="#announcements-full" class="hero-ann-viewall">View all announcements →</a>
+ </div>
+ </div>
  </div>
 </div>
 
@@ -186,20 +242,19 @@
 </div>
 
 <!-- ANNOUNCEMENTS — powered by OneDrive Excel -->
-<div class="section section-gray">
+<div class="section section-gray" id="announcements-full">
   <div class="section-header">
     <div class="section-title">Announcements</div>
-    <span style="font-size:11px;color:#888;">Updated automatically from OneDrive</span>
+    <span style="font-size:11px;color:#888;">Live from OneDrive — updated automatically</span>
   </div>
-  <div id="announcements-container">
-    <div id="ann-loading" style="text-align:center;padding:24px;color:#888;font-size:13px;">Loading announcements...</div>
+  <div style="background:#fff;border:1px solid #e5e5e5;border-radius:6px;overflow:hidden;">
+    <iframe src="https://newyorkpresbyterian-my.sharepoint.com/:x:/r/personal/lhw9007_nyp_org/Documents/NYP-BMH-Residency/Announcements/Announcements1.xlsx?d=w05b5a858c8194b63b9fe120d49e251f5&csf=1&web=1&e=s1tIUT&action=embedview" width="100%" height="420" frameborder="0" style="border:none;display:block;"></iframe>
   </div>
 </div>
 
 <div id="footer-placeholder"></div>
 
 <script src="shared.js"></script>
-<script src="announcements.js"></script>
 <script>
  document.getElementById('nav-placeholder').innerHTML = renderNav('home');
  document.getElementById('footer-placeholder').innerHTML = renderFooter();
